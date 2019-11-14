@@ -1,7 +1,7 @@
 </main>
 <footer>
     <?php
-    include("./includes/components/nav.php");
+    include("nav.php");
     ?>
 </footer>
 </body>

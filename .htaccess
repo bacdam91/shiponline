@@ -1,0 +1,8 @@
+DirectoryIndex shiponline.php
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^ shiponline.php [L]
+
+RewriteRule !^(public/|shiponline\.php) [NC,F]
