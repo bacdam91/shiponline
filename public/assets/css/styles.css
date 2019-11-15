@@ -4,23 +4,30 @@ html {
 		"Helvetica Neue", sans-serif;
 }
 
+.prompt {
+	font-size: 0.9em;
+	text-align: center;
+}
+
 .error {
 	color: rgb(212, 41, 41);
 	font-weight: 600;
 	padding: 5px 10px;
+	text-align: center;
 }
 
 .success {
 	color: rgb(19, 145, 57);
 	font-weight: 600;
 	padding: 5px 10px;
+	text-align: center;
 }
 
 input {
 	padding: 5px 10px;
 }
 
-#register_form {
+.user-form {
 	display: grid;
 	position: relative;
 	grid-template-columns: max-content 1fr;
@@ -37,7 +44,7 @@ input {
 	box-shadow: 1px 1px 2px rgb(117, 117, 117);
 }
 
-#register_form input[type="submit"] {
+.user-form input[type="submit"] {
 	grid-column: 1 / 3;
 	cursor: pointer;
 }

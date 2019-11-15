@@ -1,4 +1,4 @@
-<form id="register_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+<form id="register_form" class="user-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
     <label for="firstname">Firstname: </label>
     <input value="<?php if (isset($firstname)) {
                         echo $firstname;
@@ -20,5 +20,5 @@
                         echo $phone;
                     } ?>" type="text" name="phone" id="phone" minlength="10" maxlength="10" pattern="<?php echo Pattern::PHONE; ?>" placeholder="Phone Number" required>
     <input type="submit" value="Register" name="submit">
-
 </form>
+<p class="prompt">Already registered? <a href="./login.php">Login here!</a></p>

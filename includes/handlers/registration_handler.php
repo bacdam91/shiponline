@@ -2,7 +2,6 @@
 
 $errors = array();
 $conn = connectToDatabase($servername, $db, $username, $password);
-$password_criteria = ["1 x uppercase letter", "1 x lowercase letter", "1 x number", "1 of the following special characters (&#33, &#64, &#35, &#36, &#37, &#38)."];
 $lastInsertId = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -57,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($errors)) {
         try {
-            $sql = "INSERT INTO Customer (firstname, lastname, password, email, phone) VALUES (?, ?, SHA2(?, 256), ?, ?)";
+            $sql = "INSERT INTO Customer (Firstname, Lastname, Password, Email, Phone) VALUES (?, ?, SHA2(?, 256), ?, ?)";
             $conn->prepare($sql)->execute([$firstname, $lastname, $password_01, $email, $phone]);
             $lastInsertId = $conn->lastInsertId();
         } catch (PDOException $e) {

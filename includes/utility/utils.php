@@ -1,5 +1,7 @@
 <?php
 
+$password_criteria = ["1 x uppercase letter", "1 x lowercase letter", "1 x number", "1 of the following special characters (&#33, &#64, &#35, &#36, &#37, &#38)."];
+
 function sanitiseInput($val)
 {
     $val = trim($val);
