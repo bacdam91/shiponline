@@ -5,7 +5,7 @@ require_once("../includes/components/header.php");
 require_once("../includes/utility/utils.php");
 require_once("../includes/handlers/database_handler.php");
 require_once("../includes/classes/abstract/Pattern.php");
-
+require_once("../includes/handlers/request_handler.php");
 ?>
 
 <section>
@@ -16,6 +16,12 @@ require_once("../includes/classes/abstract/Pattern.php");
     } else {
         echo "<p class=\"success\">You are logged in with customer number " . $_SESSION["CustomerID"] . ". <a href=\"./logout.php\">Logout?</a></p>";
         require("../includes/components/request_form.php");
+
+        if (!empty($errors)) {
+            foreach ($errors as $error) {
+                echo $error;
+            }
+        }
     }
     ?>
 </section>

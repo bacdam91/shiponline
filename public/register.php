@@ -6,7 +6,6 @@ require_once("../includes/utility/utils.php");
 require_once("../includes/handlers/database_handler.php");
 require_once("../includes/classes/abstract/Pattern.php");
 require_once("../includes/handlers/registration_handler.php");
-
 ?>
 
 <section>
