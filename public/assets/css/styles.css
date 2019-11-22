@@ -23,28 +23,56 @@ html {
 	text-align: center;
 }
 
-input {
-	padding: 5px 10px;
-}
-
 .user-form {
-	display: grid;
-	position: relative;
-	grid-template-columns: max-content 1fr;
-	grid-auto-rows: 30px;
-	grid-gap: 10px;
-	width: 400px;
+	display: block;
 	margin: auto;
-	font-size: 0.9em;
-	line-height: 30px;
 	background-color: white;
+	width: 600px;
+	margin: auto;
 	border: 1px solid rgb(172, 172, 172);
 	padding: 20px;
 	border-radius: 3px;
 	box-shadow: 1px 1px 2px rgb(117, 117, 117);
 }
 
+.user-form input,
+.user-form select {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 5px 10px;
+	width: 208px;
+	margin: 7px 0 0 0;
+}
+
+.user-form select.sm {
+	width: 98px;
+}
+
+.user-form label {
+	display: inline-block;
+	width: 150px;
+}
+
+.user-form span {
+	display: inline-block;
+	width: 4px;
+}
+
+.user-form fieldset {
+	display: block;
+	position: relative;
+	margin: 0 0 20px 0;
+	font-size: 0.9em;
+	line-height: 30px;
+	border: 1px solid rgb(196, 196, 196);
+	border-radius: 3px;
+}
+
+fieldset legend {
+	font-weight: 600;
+}
+
 .user-form input[type="submit"] {
-	grid-column: 1 / 3;
+	width: 100px;
 	cursor: pointer;
 }

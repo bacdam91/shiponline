@@ -15,6 +15,7 @@ require_once("../includes/classes/abstract/Pattern.php");
         header("Location: ./login.php");
     } else {
         echo "<p class=\"success\">You are logged in with customer number " . $_SESSION["CustomerID"] . ". <a href=\"./logout.php\">Logout?</a></p>";
+        require("../includes/components/request_form.php");
     }
     ?>
 </section>
