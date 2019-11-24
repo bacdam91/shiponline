@@ -22,6 +22,10 @@ require_once("../includes/handlers/request_handler.php");
                 echo $error;
             }
         }
+
+        if ($lastInsertId !== null) {
+            echo "<p class=\"success\">$lastInsertId</p>";
+        }
     }
     ?>
 </section>

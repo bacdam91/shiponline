@@ -2,8 +2,8 @@
     <fieldset>
         <legend>Login</legend>
         <label for="customer-number">Customer Number: </label>
-        <input value="<?php if (isset($customerNumber)) {
-                            echo $customerNumber;
+        <input value="<?php if (isset($_POST["customer-number"])) {
+                            echo $_POST["customer-number"];
                         } ?>" type="number" name="customerNumber" id="customerNumber" minlength="3" maxlength="4" placeholder="Customer Number" required>
         <br />
         <label for="password">Password: </label>
